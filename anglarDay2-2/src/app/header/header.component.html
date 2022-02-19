@@ -1,0 +1,14 @@
+<div class="row m-1">
+    <div class="col-1"></div>
+    <div class="col-10 d-flex">
+        <div class="card m-3 border-0" style="width: 25rem;" *ngFor = "let element of elements">
+            <div class="card-body text-center">
+                <img src="../../assets/4.png" class="rounded-circle w-100">
+                <h5 class="card-title">{{element.head}}</h5>
+                <p class="card-text">{{element.des}}</p>
+                <a href="#" class="btn btn-secondary">{{element.btn}}</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-1"></div>
+</div>

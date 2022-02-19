@@ -1,0 +1,17 @@
+<div class="row">
+    <ul class="card border-0 my-3 list-group-flush" >
+        <li class="d-flex g-0 list-group-item" *ngFor = "let element of elements">
+            <div class="col-md-4 me-4">
+                <img [src]="element.src" class="img-fluid m-3" alt="...">
+            </div>
+            <div class="col-md-7">
+                <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{{element.title}}</h5>
+                <p class="card-text">{{element.des}}</p>
+                <p class="card-text">{{element.des}}</p>
+                <p class="card-text">{{element.des}}</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

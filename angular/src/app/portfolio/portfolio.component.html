@@ -1,0 +1,13 @@
+<div class="row justify-content-center bg-light h-100">
+    <div class="col-12 display-6 m-3 p-4">Portfolio</div>
+    <div class="row align-items-center justify-content-center row-col-3 flex-wrap m-2" >
+      <div class="col-3 card m-2 shadow" *ngFor = "let project of projects; let i = index" [ngClass] = "i % 2 == 0 ? 'bg-secondary' : 'bg-dark'">
+        <div class="card-body">
+          <div class="card-text m-2 text-light text-center">
+            <h5>{{ project.title }}</h5>
+            <p>{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

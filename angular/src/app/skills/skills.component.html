@@ -1,0 +1,30 @@
+<div class="row text-center justify-content-center text-light bg-dark">
+    <div class="display-5 fw-bold p-2 m-4">Skills</div>
+    <div class="row text-center justify-content-evenly col-12 m-3">
+      <p class="small col-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum cumque dignissimos aliquid impedit, dolores cupiditate mollitia repudiandae laboriosam enim? Id obcaecati enim nihil harum ullam aliquam omnis quas natus necessitatibus.</p>
+      <div class="d-flex flex-column align-items-center justify-content-between m-5 col-5">
+        <div class="m-2 w-50 border-light border-bottom p-2">Skills Covered</div>
+        <div class="w-50" *ngFor = "let skill of skills">
+          <p class="m-1 p-1">{{ skill }}</p>
+        </div>
+      </div>
+      <div class="row align-items-center m-5 col-5">
+        <div class="progress border border-light m-2 h-20 p-0">
+          <div class="progress-bar bg-dark" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">HTML</div>
+          <div class="progress-bar bg-secondary w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="progress border border-light m-2 h-20 p-0">
+          <div class="progress-bar bg-dark" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">CSS</div>
+          <div class="progress-bar bg-secondary w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="progress border border-light m-2 h-20 p-0">
+          <div class="progress-bar bg-dark" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">JavaScript</div>
+          <div class="progress-bar bg-secondary w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="progress border border-light m-2 h-20 p-0">
+          <div class="progress-bar bg-dark" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">SASS</div>
+          <div class="progress-bar bg-secondary w-50" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
