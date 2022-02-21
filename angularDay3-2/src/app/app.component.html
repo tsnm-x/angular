@@ -1,0 +1,4 @@
+<div class="container-fluid">
+  <app-head [del]="deleted" (list)="receiveData($event)"></app-head>
+  <app-todo-list (itemSender)="recieveDeletedData($event)" [Rdata]="data"></app-todo-list>
+</div>

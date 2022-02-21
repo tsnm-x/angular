@@ -1,0 +1,10 @@
+<div class="row flex-column bg-primary">
+    <h2 class="text-light my-3">To-Do App</h2>
+    <form>
+        <div class="my-3">
+          <label for="exampleInputEmail1" class="form-label text-light my-2">Add New To-do</label>
+          <input type="text" name="val" [(ngModel)]="val" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary border-light my-3" (click)="saveData()">Submit</button>
+      </form>
+</div>

@@ -1,0 +1,12 @@
+<div class="row bg-light border">
+    <h3 class="text-center m-4">Let's get some work done!</h3>
+    <div class="card bg-light my-3">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex bg-light"  *ngFor="let item of Rdata">
+                <div class="flex-grow-1">{{ item }}</div>
+                <button class="btn btn-outline-primary mx-1">Mark As Completed</button>
+                <button class="btn btn-outline-primary" (click)="deleteItem(item)">Delete</button>
+            </li>
+        </ul>
+    </div>
+</div>
