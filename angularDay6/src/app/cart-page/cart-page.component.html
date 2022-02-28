@@ -8,7 +8,6 @@
                 <h5 class="card-title">{{cardItem.product.title}}</h5>
                 <p class="card-text">{{cardItem.product.category}}</p>
                 <p class="card-text">{{cardItem.product.price | pricePipe }}</p>
-                <!-- <p class="card-text"  [ngClass] = "cardDetails.rating.count ? 'text-success' : 'text-danger'">{{ availItems | changeCount: cardDetails.rating.count }}</p> -->
                 <a class="btn btn-outline-success mx-1" (click)="increaseNum(cardItem.product)">+</a>
                 <span class="card-text">{{cardItem.count}}</span>
                 <a class="btn btn-outline-danger mx-1" (click)="decreaseNum(cardItem.product)">-</a>
