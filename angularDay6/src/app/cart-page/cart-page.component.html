@@ -1,17 +1,18 @@
 <div>
     <div *ngIf="!cartList.length" class="alert alert-secondary p-2 m-4 text-center w-100">Nothing seems to be in here...
     </div>
-    <div class="col m-3 d-flex justify-content-evenly">
-        <div class="card"  *ngFor="let cardItem of cartList" style="width: 21rem;">
+    <div class="col m-3 d-flex justify-content-evenly flex-wrap">
+        <div class="card text-center m-4"  *ngFor="let cardItem of cartList" style="width: 21rem;">
             <img [src]="cardItem.product.image" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">{{cardItem.product.title}}</h5>
                 <p class="card-text">{{cardItem.product.category}}</p>
                 <p class="card-text">{{cardItem.product.price | pricePipe }}</p>
-                <a class="btn btn-outline-success mx-1" (click)="increaseNum(cardItem.product)">+</a>
+                <a class="btn btn-outline-success mx-2" (click)="increaseNum(cardItem.product)">+</a>
                 <span class="card-text">{{cardItem.count}}</span>
-                <a class="btn btn-outline-danger mx-1" (click)="decreaseNum(cardItem.product)">-</a>
-                <a class="btn btn-danger" (click)="removeItem(cardItem.product)">remove</a>
+                <a class="btn btn-outline-danger mx-2" (click)="decreaseNum(cardItem.product)">-</a>
+                <br>
+                <a class="btn btn-danger m-2" (click)="removeItem(cardItem.product)">remove</a>
             </div>
         </div>
     </div>
