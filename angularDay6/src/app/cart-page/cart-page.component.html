@@ -1,7 +1,8 @@
-<div class="d-flex justify-content-center">
-    <div *ngIf = "!cartList.length" class="alert alert-secondary p-2 m-4 text-center w-100">Nothing seems to be in here...</div>
-    <div class="col m-3" *ngFor = "let cardItem of cartList">
-        <div class="card" style="width: 21rem;">
+<div>
+    <div *ngIf="!cartList.length" class="alert alert-secondary p-2 m-4 text-center w-100">Nothing seems to be in here...
+    </div>
+    <div class="col m-3 d-flex justify-content-evenly">
+        <div class="card"  *ngFor="let cardItem of cartList" style="width: 21rem;">
             <img [src]="cardItem.product.image" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">{{cardItem.product.title}}</h5>
@@ -14,5 +15,8 @@
                 <a class="btn btn-danger" (click)="removeItem(cardItem.product)">remove</a>
             </div>
         </div>
+    </div>
+    <div *ngIf="cartList.length" class="d-flex justify-content-center">
+        <div class="alert alert-info m-5 p-2 w-100  text-center">Total Price: {{totalPrice | pricePipe }}</div>
     </div>
 </div>

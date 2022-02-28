@@ -10,10 +10,15 @@ import { ProductsService } from '../services/products.service';
 export class CartPageComponent implements OnInit, DoCheck {
   cartList :any;
   counter : any;
+  totalPrice: number = 0;
   constructor(private products : ProductsService, private count : CounterService) { }
 
   ngOnInit(): void {
     this.cartList = this.products.getCartProducts();
+    this.cartList.forEach((element: any) => {
+      this.totalPrice += element.product.price * element.count;
+      console.log(element.product.price * element.count)
+    });
     this.count.getProductCount().subscribe(
       (productCount)=>{
         this.counter = productCount
@@ -26,7 +31,12 @@ export class CartPageComponent implements OnInit, DoCheck {
   }
 
   ngDoCheck(): void {
+    this.totalPrice = 0;
     this.cartList = this.products.getCartProducts();
+    this.cartList.forEach((element: any) => {
+      this.totalPrice += element.product.price * element.count;
+      console.log(element.product.price * element.count)
+    });
   }
 
   increaseNum(item: any){
