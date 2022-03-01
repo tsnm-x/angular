@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CardProducts } from '../interfaces/card-products';
+import { CardProducts } from './interfaces/card-products';
 
 
 @Injectable({
@@ -37,8 +37,6 @@ export class ProductsService {
       if (item) {
 
         item.count++;
-        console.log(item.count);
-        
 
       } else {
 

@@ -1,0 +1,12 @@
+<div class="card" style="width: 21rem;">
+    <img [src]="cardDetails.image" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{cardDetails.title}}</h5>
+      <p class="card-text">{{cardDetails.category}}</p>
+      <p class="card-text">{{cardDetails.price}}</p>
+      <!-- <p class="card-text"  [ngClass] = "cardDetails.rating.count ? 'text-success' : 'text-danger'">{{ availItems | changeCount: cardDetails.rating.count }}</p> -->
+      <a class="btn btn-outline-primary mx-2" (click)="viewProduct()">View Details</a>
+      <a class="btn btn-outline-dark" (click)="addToCart(cardDetails.id)">Add To Cart</a>
+    </div>
+  </div>
+  

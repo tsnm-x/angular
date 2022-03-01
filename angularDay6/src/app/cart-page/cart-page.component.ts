@@ -41,7 +41,7 @@ export class CartPageComponent implements OnInit, DoCheck {
 
   increaseNum(item: any){
     this.count.setProductCount(++this.counter);
-    this.products.pushCardProduct(item.id)
+    this.products.pushCardProduct(item.id);
   }
 
   decreaseNum(item: any){
